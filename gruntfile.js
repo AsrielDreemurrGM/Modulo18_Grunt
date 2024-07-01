@@ -10,4 +10,6 @@ module.exports = function(grunt) {
             done();
         }, 3000);
     })
+
+    grunt.registerTask('default', ['olaGrunt']);
 }
