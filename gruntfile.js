@@ -6,6 +6,14 @@ module.exports = function(grunt) {
                 files: {
                     'main.css': 'main.less'
                 }
+            },
+            production: {
+                options: {
+                    compress: true,
+                },
+                files: {
+                    'main.min.css': 'main.less'
+                }
             }
         }
     })
