@@ -40,6 +40,24 @@ module.exports = function(grunt) {
                         dest: 'dev/'
                     }
                 ]
+            },
+            dist: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'ENDEREÇO_DO_CSS',
+                            replacement: './styles/main.min.css'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['prebuild/index.html'],
+                        dest: 'dist/'
+                    }
+                ]
             }
         },
         htmlmin: {
