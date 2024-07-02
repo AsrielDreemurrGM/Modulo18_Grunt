@@ -39,5 +39,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-sass');
 
-    grunt.registerTask('default', ['less', 'sass']);
+    grunt.registerTask('default', ['olaGrunt', 'less', 'sass']);
 }
