@@ -64,7 +64,7 @@ module.exports = function(grunt) {
             dist: {
                 options: {
                     removeComments: true,
-                    collapsewhitespace: true
+                    collapseWhitespace: true
                 },
                 files: {
                     'prebuild/index.html': 'src/index.html'
@@ -79,5 +79,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['less:production']);
+    grunt.registerTask('build', ['less:production', 'htmlmin:dist', 'replace:dist']);
 }
